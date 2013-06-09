@@ -1,5 +1,12 @@
+" load once
+if &cp || exists("g:loaded_unite_tmux")
+    finish
+endif
+let g:loaded_unite_tmux = 1
+
 let s:save_cpo = &cpo
 set cpo&vim
+" ---------------------------------------------------------------------
 
 " 新しい tmux window を開いて選択中のディレクトリに cd
 let s:tmux_window = {
@@ -29,5 +36,6 @@ endfunction"}}}
 call unite#custom_action('file,directory', 'tmux_split', s:tmux_split)
 unlet s:tmux_split
 
+" ---------------------------------------------------------------------
 let &cpo = s:save_cpo
 unlet s:save_cpo
