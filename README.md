@@ -2,7 +2,9 @@
 
 ### 1. 概要
 unite で選択中のファイル、ディレクトリを tmux の別ウィンドウ、別ペインで開くプラグインです
+
 具体的には unite kind 'file, directory' に対して以下の２つのアクションを追加します
+
 * tmux_window
  * 選択中のファイル、ディレクトリを tmux の新規ウィンドウで開きます
 * tmux_split
